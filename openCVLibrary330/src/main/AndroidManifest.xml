@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.opencv"
+    android:versionCode="3300"
+    android:versionName="3.3.0">
+    <!--
+        <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21" />-->
+    <application>
+        <activity android:name=".samples.puzzle15.Puzzle15Activity" />
+        <activity android:name=".samples.cameracalibration.CameraCalibrationActivity" />
+        <activity android:name=".samples.colorblobdetect.ColorBlobDetectionActivity" />
+        <activity android:name=".samples.facedetect.FdActivity" />
+        <activity android:name=".samples.imagemanipulations.ImageManipulationsActivity" />
+        <activity android:name=".samples.tutorial1.Tutorial1Activity" />
+        <activity android:name=".samples.tutorial2.Tutorial2Activity" />
+        <activity android:name=".samples.tutorial3.Tutorial3Activity" />
+    </application>
+</manifest>

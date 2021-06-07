@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import dagger.hilt.android.AndroidEntryPoint
+import gloomyfish.opencvdemo.MainActivity
 import org.opencv.samples.cameracalibration.CameraCalibrationActivity
 import org.opencv.samples.colorblobdetect.ColorBlobDetectionActivity
 import org.opencv.samples.facedetect.FdActivity
@@ -67,6 +68,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btn9).setOnClickListener {
             startActivity(Intent(this@MainActivity, Tutorial3Activity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn10).setOnClickListener {
+            startActivity(Intent(this@MainActivity, gloomyfish.opencvdemo.MainActivity::class.java))
         }
 
         car.use()

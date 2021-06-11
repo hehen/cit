@@ -121,4 +121,6 @@ dependencies {
     implementation project(':openCVLibrary330')
     implementation project(':opencvdemo')
     implementation 'androidx.multidex:multidex:2.0.0'
+    //preference
+    implementation 'androidx.preference:preference:1.1.0'
 }

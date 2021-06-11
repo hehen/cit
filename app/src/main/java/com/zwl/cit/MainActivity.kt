@@ -8,6 +8,8 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.zwl.cit.draganddropdemo.DragAndDropDemoActivity
+import com.zwl.cit.preference.PreferenceActivity
+import com.zwl.cit.textInputLayout.TextInputLayoutActivity
 import dagger.hilt.android.AndroidEntryPoint
 import org.opencv.samples.cameracalibration.CameraCalibrationActivity
 import org.opencv.samples.colorblobdetect.ColorBlobDetectionActivity
@@ -75,6 +77,12 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btn11).setOnClickListener {
             startActivity(Intent(this@MainActivity, DragAndDropDemoActivity::class.java))
+        }
+        findViewById<Button>(R.id.btn12).setOnClickListener {
+            startActivity(Intent(this@MainActivity, TextInputLayoutActivity::class.java))
+        }
+        findViewById<Button>(R.id.btn13).setOnClickListener {
+            startActivity(Intent(this@MainActivity, PreferenceActivity::class.java))
         }
 
         car.use()

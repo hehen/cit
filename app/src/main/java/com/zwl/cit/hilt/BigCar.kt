@@ -1,4 +1,4 @@
-package com.zwl.cit
+package com.zwl.cit.hilt
 
 import android.content.Context
 import android.util.Log

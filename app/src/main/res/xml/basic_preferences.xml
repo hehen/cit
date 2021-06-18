@@ -34,7 +34,7 @@
             app:key="icon"
             app:title="@string/title_icon_preference"
             app:summary="@string/summary_icon_preference"
-            app:icon="@drawable/ic_android"/>
+            app:icon="@mipmap/ic_launcher"/>
 
         <Preference
             app:key="single_line_title"

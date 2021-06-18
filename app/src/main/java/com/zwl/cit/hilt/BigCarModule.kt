@@ -1,4 +1,4 @@
-package com.zwl.cit
+package com.zwl.cit.hilt
 
 import dagger.Module
 import dagger.Provides

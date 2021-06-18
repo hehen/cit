@@ -7,7 +7,11 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.zwl.cit.download.DownloadService
 import com.zwl.cit.draganddropdemo.DragAndDropDemoActivity
+import com.zwl.cit.hilt.Car
+import com.zwl.cit.hilt.FootLight
+import com.zwl.cit.hilt.Light
 import com.zwl.cit.preference.PreferenceActivity
 import com.zwl.cit.textInputLayout.TextInputLayoutActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -83,6 +87,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn13).setOnClickListener {
             startActivity(Intent(this@MainActivity, PreferenceActivity::class.java))
+        }
+        findViewById<Button>(R.id.btn14).setOnClickListener {
+            startService(Intent(this,DownloadService::class.java))
         }
 
         car.use()

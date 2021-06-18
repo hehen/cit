@@ -1,4 +1,4 @@
-package com.zwl.cit
+package com.zwl.cit.hilt
 
 import javax.inject.Qualifier
 
@@ -9,4 +9,4 @@ import javax.inject.Qualifier
  */
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
-annotation class HeadLight
+annotation class FootLight

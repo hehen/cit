@@ -1,8 +1,7 @@
-package com.zwl.cit
+package com.zwl.cit.hilt
 
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 

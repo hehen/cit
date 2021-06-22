@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.book.datamodel.AppConstants;
 import com.book.datamodel.ChapterUtils;
 import com.book.datamodel.ItemDto;
@@ -19,6 +20,7 @@ import com.book.datamodel.SectionsListViewAdaptor;
 
 import org.opencv.android.OpenCVLoader;
 
+@Route(path = "/opencvdemo/MainActivity")
 public class MainActivity extends AppCompatActivity {
     private String CV_TAG = "OpenCV";
 

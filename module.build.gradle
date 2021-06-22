@@ -1,4 +1,5 @@
 
+apply plugin: 'com.zwl.cit.plugin'
 import com.zwl.cit.plugin.*
 
 android {

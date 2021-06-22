@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.alibaba.arouter'
 }
 import com.zwl.cit.plugin.*
 
@@ -56,9 +57,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    kapt {
-        correctErrorTypes true
-    }
     //开启dataBinding
     buildFeatures {
         dataBinding true
@@ -80,6 +78,18 @@ android {
         pickFirst 'lib/x86/libopencv_java3.so'
         pickFirst 'lib/x86_64/libopencv_java3.so'*/
         pickFirst 'lib/*/libopencv_java3.so'
+    }
+
+    //避免编译不能用于在编译类路径中发现的注解处理器，因为它们中的任何更改都需要运行注解处理任务
+    kapt.includeCompileClasspath = false
+    kapt.generateStubs = true
+}
+
+kapt {
+    correctErrorTypes true
+    arguments {
+        //arouter每个模块需要添加
+        arg("AROUTER_MODULE_NAME", project.getName())
     }
 }
 
@@ -126,7 +136,15 @@ dependencies {
     implementation "androidx.work:work-multiprocess:$work_version"
     implementation project(':openCVLibrary330')
     implementation project(':opencvdemo')
-    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
     //preference
     implementation 'androidx.preference:preference:1.1.0'
+
+    //arouter每个模块需要添加
+    implementation Arouter.api
+    kapt Arouter.compiler
+
+    implementation project(':JavaPoetDemo')
+    implementation project(':test-annotation')
+    kapt project(':test-complier')
 }

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.alibaba.android.arouter.launcher.ARouter
 import com.zwl.cit.download.DownloadService
 import com.zwl.cit.draganddropdemo.DragAndDropDemoActivity
 import com.zwl.cit.hilt.Car
@@ -76,7 +77,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, Tutorial3Activity::class.java))
         }
         findViewById<Button>(R.id.btn10).setOnClickListener {
-            startActivity(Intent(this@MainActivity, gloomyfish.opencvdemo.MainActivity::class.java))
+//            startActivity(Intent(this@MainActivity, gloomyfish.opencvdemo.MainActivity::class.java))
+            ARouter.getInstance().build("/opencvdemo/MainActivity").navigation()
         }
 
         findViewById<Button>(R.id.btn11).setOnClickListener {

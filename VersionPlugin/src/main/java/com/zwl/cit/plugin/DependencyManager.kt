@@ -34,6 +34,8 @@ object Versions {
     val junitExt = "1.1.1"
     val espressoCore = "3.2.0"
     val jDatabinding = "1.0.1"
+
+    val arouter = "1.5.2"
 }
 
 object AndroidX {
@@ -100,3 +102,11 @@ object Depend {
     val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 }
 
+object Arouter {
+    val api = "com.alibaba:arouter-api:${Versions.arouter}"
+    val compiler = "com.alibaba:arouter-compiler:${Versions.arouter}"
+}
+
+object Javapoet{
+    val javapoet = "com.squareup:javapoet:1.13.0"
+}

@@ -1,0 +1,10 @@
+打包并注册注解处理器
+完成注解处理器的最后一步是打包并注册它，让java编译器或者其他工具可以找到它。
+
+注册注解处理器的最简单的方法是利用标准java服务链(standard Java services mechanism)：
+
+将注解处理器打入jar包中
+包含在jar文件目录META-INF/services下
+在目录下包含一个叫javax.annotation.processing.Processor的文件
+在文件中写入处理器的全限定名，每行一个
+java编译器以及其他工具会在提供claspath中寻找这个文件并使用注册的处理器

@@ -1,4 +1,7 @@
+import com.zwl.cit.plugin.*
+
 apply plugin: 'com.android.library'
+apply plugin:'com.alibaba.arouter'
 
 android {
     compileSdkVersion 30
@@ -7,6 +10,12 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 30
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -39,6 +48,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation project(':openCVLibrary330')
+
+    //arouter每个模块需要添加
+    implementation Arouter.api
+    annotationProcessor Arouter.compiler
 }
 
 

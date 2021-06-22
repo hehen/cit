@@ -13,6 +13,7 @@ import com.zwl.cit.draganddropdemo.DragAndDropDemoActivity
 import com.zwl.cit.hilt.Car
 import com.zwl.cit.hilt.FootLight
 import com.zwl.cit.hilt.Light
+import com.zwl.cit.plugin.Plugin1Activity
 import com.zwl.cit.preference.PreferenceActivity
 import com.zwl.cit.textInputLayout.TextInputLayoutActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -92,6 +93,10 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn14).setOnClickListener {
             startService(Intent(this,DownloadService::class.java))
+        }
+
+        findViewById<Button>(R.id.btn15).setOnClickListener {
+            startActivity(Intent(this, Plugin1Activity::class.java))
         }
 
         car.use()

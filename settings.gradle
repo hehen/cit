@@ -1,7 +1,9 @@
 rootProject.name = "cit"
 includeBuild ("VersionPlugin")
 include ':app'
+include ':app2'
 include ':openCVLibrary330', ":opencvdemo"
 include ':JavaPoetDemo'
 include ':test-annotation'
 include ':test-complier'
+include ':common'

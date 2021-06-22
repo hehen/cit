@@ -147,4 +147,5 @@ dependencies {
     implementation project(':JavaPoetDemo')
     implementation project(':test-annotation')
     kapt project(':test-complier')
+    implementation project(':common')
 }

@@ -110,3 +110,7 @@ object Arouter {
 object Javapoet{
     val javapoet = "com.squareup:javapoet:1.13.0"
 }
+
+object Material{
+    val material = "com.google.android.material:material:1.2.1"
+}
